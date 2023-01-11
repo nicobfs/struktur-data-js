@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Values</title>
+</head>
+
+<body>
+    <script>
+        const profile = { // profile merupakan object
+            firstName: "Nico", // property
+            lastName: "BFS", // property
+            age: 28 // property
+        }
+        const { firstName, age, isMale = true } = profile; // menambahkan ( = true ) setelah variable yg tidak memiliki property sehingga nilai ini mejadi sebuah nilai defaultnya
+
+        console.log(firstName);
+        console.log(age);
+        console.log(isMale);
+
+        //berikutnya ini merupakan Assigning to Different Local Variable Names, tujuannya adalah mengganti nama variable menjadi variable yg berbeda
+        const { firstName: localFirstName, lastName: localLastName, age: localAge } = profile;
+
+        console.log(localFirstName);
+        console.log(localLastName);
+        console.log(localAge);
+
+    </script>
+</body>
+
+</html>

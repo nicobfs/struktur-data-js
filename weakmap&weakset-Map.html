@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeakMap dan WeakSet</title>
+</head>
+
+<body>
+    <script>
+        //Map
+        let visitsCountMap = new Map(); // Menyimpan daftar User
+
+        function countUser(user) {
+            let count = visitsCountMap.get(user) || 0;
+            visitsCountMap.set(user, count + 1);
+        }
+
+        let jonas = { name: "Jonas" };
+        countUser(jonas);           // Menambahkan user "Jonas"
+
+        jonas = null;               // Data object "Jonas" dihapus
+
+        //delay dibutuhkan untuk menunggu garbage collector bekerja
+        setTimeout(function () {
+            console.log(visitsCountMap); 
+        }, 10000)
+        //Map memungkinakan kita untuk mendapatkan kembali data yg masih mungkin diraih, data masih tersimpan di dalam memory sampai kita benar" menghapusnya
+        //WeakMap akan menghapus data yg sudah tidak dapat dijangkau
+
+        //WeakMap
+        const {inspect} = require('util');
+        let visitsCountMap = new WeakMap(); // Menyimpan daftar User
+
+        function countUser(user) {
+            let count = visitsCountMap.get(user) || 0;
+            visitsCountMap.set(user, count + 1);
+        }
+
+        let nico = { name: "Nico" };
+        countUser(nico);           // Menambarkan user "Nico"
+
+        nico = null;               // Data object "Nico" dihapus
+
+        //delay dibutuhkan untuk menunggu garbage collector bekerja
+        setTimeout(function () {
+            console.log(inspect(visitsCountMap, {showHidden: true})); 
+        }, 10000);
+    </script>
+</body>
+
+</html>  

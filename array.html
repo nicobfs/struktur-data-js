@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        let myArray = ["Cokelat", 42.5, 22, true, "Programming"];
+        console.log(myArray[0]);
+        console.log(myArray[1]);
+        console.log(myArray[2]);
+        console.log(myArray[3]);
+        console.log(myArray[4]);
+        console.log(myArray[5]);
+        console.log("Panjang nilai myArray adalah" + myArray.length + ".")
+
+        myArray.push(`Javascript`);
+        //push adalah metode array yg digunakan untuk memasukkan data pada aray
+        console.log(myArray);
+
+        myArray.pop();
+        //pop adalah metode array yg digunakan untuk mengambil data terakhir pada array
+        console.log(myArray);
+
+        myArray.shift();
+        //shift adalah metode array yg digunakan untuk mengeluarkan/mengambil data di awal pada array
+        myArray.unshift("Apple");
+        //unshift adalah metode array yg digunakan untuk memasukkan/menyisipkan data di awal pada array
+        console.log(myArray);
+
+        delete myArray[2];
+        //delete adalah metode array yg digunakan untuk menghapus data pada index yg ditentukan dan membiarkan posisi tersebut kosong.
+        console.log(myArray);
+
+        myArray.splice(3, 1);
+        console.log(myArray);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+    <script>
+        //untuk mendefinisikan Map gunakan constructor seperti di bawah ini
+        //const myMap = new Map();
+
+        const capital = new Map([
+            ["Jakarta", "Indonesia"],
+            ["London", "England"],
+            ["Tokyo", " Japan"]
+        ]);
+
+        console.log(capital.size);// menghitung jumlah pasangan key-value
+        console.log(capital.get("London"));//get = mendapatkan nilai dari map
+        capital.set("New Delhi", "India");//set = menambahkan pasangan key-value baru
+        console.log(capital.size);
+        console.log(capital.get("New Delhi"));
+
+        //kita tidak dapat menggunakan fitur Map seperti .has dan .delete karena menyebabkan data tidak tersimpan dalam Map query
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Object & Array</title>
+</head>
+<body>
+   <script>
+       const profile = { // profile merupakan object
+           firstName : "Nico", // property
+           lastName : "BFS", // property
+           age : 28 // property
+       }
+
+       const {firstName, lastName, age} = profile; //firstName, lastname, age merupakan variable
+       //Penulisan sintaks destructuring object pada ES6 menggunakan object literal ({}) di sisi kiri dari operator assignment
+       //destructuring = mengurutkan/memposisikan
+       console.log(firstName, lastName, age);
+
+       //dalam destructuring object ini kita bisa menentukan salah satu nilai yang ingin kita destructurisasikan sehingga tidak perlu membuat variabel sebanyak properti yang dimiliki objeknya
+       // const {lastName} = profile;
+       //console.log(lastName);
+   </script> 
+</body>
+</html>

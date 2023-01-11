@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Assignment Array</title>
+</head>
+<body>
+    <script>
+        const faovites = ["Seafood", "Salad", "Nugget", "Soup"];
+
+        let myFood = "Ice Cream";
+        let herFood = "Noodles";
+
+        [myFood, herFood] = faovites;
+
+        console.log(myFood);
+        console.log(herFood);
+
+        //Array destructuring asssignment sangat berguna ketika kita hendak menukar nilai antara dua variabel
+        let a = 1;
+        let b = 2;
+
+        console.log("Sebelum swap");
+        console.log("Nilai a: " + a);
+        console.log("Nilai b: " + b);
+
+        [a,b] = [b,a]
+
+        console.log("Setelah swap");
+        console.log("Nilai a: " + a);
+        console.log("Nilai b: " + b);
+    </script>
+</body>
+</html>

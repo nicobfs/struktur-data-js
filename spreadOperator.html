@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+
+<body>
+    <script>
+        const favorites = ["Seafood", "Salad", "Nugget", "Soup"];
+        console.log(favorites);
+        //hasil yg ditunjukkan adalah array ditunjukkan dengan tanda "[]" karena memang kita mencetak nilai dari faovites itu sendiri
+
+        console.log(...favorites);
+        //Spread operator (...) dapat menyebarkan nilai-nilai dalam array tersebut.
+        //sama seperti kita menuliskan kode berikut
+        console.log(favorites[0], favorites[1], favorites[2], favorites[3]);
+
+        //jika terdapat beberapa array, misalkan kita tambahkan 1 array lagi
+        const others = ["Cake", "Pie", "Donut"];
+
+        const allFavorites = [favorites, others];
+        console.log(allFavorites); // akan ditampilkan 2 buah array karena arraynya tidak akan tergabung
+
+        //sehingga perlu menggunakan spread operator untuk menggabungkan kedua array sbg berikut
+        const allNewFavorites = [...favorites, ...others];
+        console.log(allNewFavorites);
+
+        const obj1 = { firstname: 'Nico', age: 28 };
+        const obj2 = { lastname: 'BFS', gender: 'M' };
+
+        const newObj = { ...obj1, ...obj2 }; //spread operator bisa juga digunakan untuk object literals yg memungkinkan kita dapat menggabungkan beberapa object dengan kode yang lebih ringkas.
+
+        console.log(newObj);
+
+    </script>
+</body>
+
+</html>
